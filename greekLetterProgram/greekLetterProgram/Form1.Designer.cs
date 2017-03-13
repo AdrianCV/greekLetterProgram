@@ -56,9 +56,10 @@
             // 
             // submitAnswerButton
             // 
-            this.submitAnswerButton.Location = new System.Drawing.Point(507, 423);
+            this.submitAnswerButton.Location = new System.Drawing.Point(676, 521);
+            this.submitAnswerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.submitAnswerButton.Name = "submitAnswerButton";
-            this.submitAnswerButton.Size = new System.Drawing.Size(126, 23);
+            this.submitAnswerButton.Size = new System.Drawing.Size(168, 28);
             this.submitAnswerButton.TabIndex = 30;
             this.submitAnswerButton.Text = "Avgi svar";
             this.submitAnswerButton.UseVisualStyleBackColor = true;
@@ -67,126 +68,145 @@
             // scoreLabel
             // 
             this.scoreLabel.AutoSize = true;
-            this.scoreLabel.Location = new System.Drawing.Point(433, 428);
+            this.scoreLabel.Location = new System.Drawing.Point(577, 527);
+            this.scoreLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.scoreLabel.Name = "scoreLabel";
-            this.scoreLabel.Size = new System.Drawing.Size(55, 13);
+            this.scoreLabel.Size = new System.Drawing.Size(69, 17);
             this.scoreLabel.TabIndex = 29;
             this.scoreLabel.Text = "Score 0/4";
             // 
             // groupLabel
             // 
             this.groupLabel.AutoSize = true;
-            this.groupLabel.Location = new System.Drawing.Point(433, 9);
+            this.groupLabel.Location = new System.Drawing.Point(577, 11);
+            this.groupLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.groupLabel.Name = "groupLabel";
-            this.groupLabel.Size = new System.Drawing.Size(45, 13);
+            this.groupLabel.Size = new System.Drawing.Size(60, 17);
             this.groupLabel.TabIndex = 28;
             this.groupLabel.Text = "Group 1";
             // 
             // nameLabel4
             // 
             this.nameLabel4.AutoSize = true;
-            this.nameLabel4.Location = new System.Drawing.Point(284, 133);
+            this.nameLabel4.Location = new System.Drawing.Point(379, 164);
+            this.nameLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameLabel4.Name = "nameLabel4";
-            this.nameLabel4.Size = new System.Drawing.Size(35, 13);
+            this.nameLabel4.Size = new System.Drawing.Size(46, 17);
             this.nameLabel4.TabIndex = 27;
             this.nameLabel4.Text = "label4";
+            this.nameLabel4.Click += new System.EventHandler(this.nameLabel4_Click);
             // 
             // nameLabel3
             // 
             this.nameLabel3.AutoSize = true;
-            this.nameLabel3.Location = new System.Drawing.Point(341, 133);
+            this.nameLabel3.Location = new System.Drawing.Point(455, 164);
+            this.nameLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameLabel3.Name = "nameLabel3";
-            this.nameLabel3.Size = new System.Drawing.Size(35, 13);
+            this.nameLabel3.Size = new System.Drawing.Size(46, 17);
             this.nameLabel3.TabIndex = 26;
             this.nameLabel3.Text = "label3";
+            this.nameLabel3.Click += new System.EventHandler(this.nameLabel3_Click);
             // 
             // nameLabel2
             // 
             this.nameLabel2.AutoSize = true;
-            this.nameLabel2.Location = new System.Drawing.Point(341, 91);
+            this.nameLabel2.Location = new System.Drawing.Point(455, 112);
+            this.nameLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameLabel2.Name = "nameLabel2";
-            this.nameLabel2.Size = new System.Drawing.Size(35, 13);
+            this.nameLabel2.Size = new System.Drawing.Size(46, 17);
             this.nameLabel2.TabIndex = 25;
             this.nameLabel2.Text = "label2";
+            this.nameLabel2.Click += new System.EventHandler(this.nameLabel2_Click);
             // 
             // nameLabel1
             // 
             this.nameLabel1.AutoSize = true;
-            this.nameLabel1.Location = new System.Drawing.Point(284, 91);
+            this.nameLabel1.Location = new System.Drawing.Point(379, 112);
+            this.nameLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameLabel1.Name = "nameLabel1";
-            this.nameLabel1.Size = new System.Drawing.Size(35, 13);
+            this.nameLabel1.Size = new System.Drawing.Size(46, 17);
             this.nameLabel1.TabIndex = 24;
             this.nameLabel1.Text = "label1";
+            this.nameLabel1.Click += new System.EventHandler(this.nameLabel1_Click);
             // 
             // feedbackPicture4
             // 
-            this.feedbackPicture4.Location = new System.Drawing.Point(122, 342);
+            this.feedbackPicture4.Location = new System.Drawing.Point(163, 421);
+            this.feedbackPicture4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.feedbackPicture4.Name = "feedbackPicture4";
-            this.feedbackPicture4.Size = new System.Drawing.Size(52, 52);
+            this.feedbackPicture4.Size = new System.Drawing.Size(69, 64);
             this.feedbackPicture4.TabIndex = 23;
             this.feedbackPicture4.TabStop = false;
             // 
             // feedbackPicture3
             // 
-            this.feedbackPicture3.Location = new System.Drawing.Point(122, 232);
+            this.feedbackPicture3.Location = new System.Drawing.Point(163, 286);
+            this.feedbackPicture3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.feedbackPicture3.Name = "feedbackPicture3";
-            this.feedbackPicture3.Size = new System.Drawing.Size(52, 52);
+            this.feedbackPicture3.Size = new System.Drawing.Size(69, 64);
             this.feedbackPicture3.TabIndex = 22;
             this.feedbackPicture3.TabStop = false;
             // 
             // feedbackPicture2
             // 
-            this.feedbackPicture2.Location = new System.Drawing.Point(122, 122);
+            this.feedbackPicture2.Location = new System.Drawing.Point(163, 150);
+            this.feedbackPicture2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.feedbackPicture2.Name = "feedbackPicture2";
-            this.feedbackPicture2.Size = new System.Drawing.Size(52, 52);
+            this.feedbackPicture2.Size = new System.Drawing.Size(69, 64);
             this.feedbackPicture2.TabIndex = 21;
             this.feedbackPicture2.TabStop = false;
             // 
             // feedbackPicture1
             // 
-            this.feedbackPicture1.Location = new System.Drawing.Point(122, 12);
+            this.feedbackPicture1.Location = new System.Drawing.Point(163, 15);
+            this.feedbackPicture1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.feedbackPicture1.Name = "feedbackPicture1";
-            this.feedbackPicture1.Size = new System.Drawing.Size(52, 52);
+            this.feedbackPicture1.Size = new System.Drawing.Size(69, 64);
             this.feedbackPicture1.TabIndex = 20;
             this.feedbackPicture1.TabStop = false;
             // 
             // letterPicture4
             // 
-            this.letterPicture4.Location = new System.Drawing.Point(12, 342);
+            this.letterPicture4.Location = new System.Drawing.Point(16, 421);
+            this.letterPicture4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.letterPicture4.Name = "letterPicture4";
-            this.letterPicture4.Size = new System.Drawing.Size(104, 104);
+            this.letterPicture4.Size = new System.Drawing.Size(139, 128);
             this.letterPicture4.TabIndex = 19;
             this.letterPicture4.TabStop = false;
             // 
             // letterPicture3
             // 
-            this.letterPicture3.Location = new System.Drawing.Point(12, 232);
+            this.letterPicture3.Location = new System.Drawing.Point(16, 286);
+            this.letterPicture3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.letterPicture3.Name = "letterPicture3";
-            this.letterPicture3.Size = new System.Drawing.Size(104, 104);
+            this.letterPicture3.Size = new System.Drawing.Size(139, 128);
             this.letterPicture3.TabIndex = 18;
             this.letterPicture3.TabStop = false;
             // 
             // letterPicture2
             // 
-            this.letterPicture2.Location = new System.Drawing.Point(12, 122);
+            this.letterPicture2.Location = new System.Drawing.Point(16, 150);
+            this.letterPicture2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.letterPicture2.Name = "letterPicture2";
-            this.letterPicture2.Size = new System.Drawing.Size(104, 104);
+            this.letterPicture2.Size = new System.Drawing.Size(139, 128);
             this.letterPicture2.TabIndex = 17;
             this.letterPicture2.TabStop = false;
             // 
             // letterPicture1
             // 
-            this.letterPicture1.Location = new System.Drawing.Point(12, 12);
+            this.letterPicture1.Location = new System.Drawing.Point(16, 15);
+            this.letterPicture1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.letterPicture1.Name = "letterPicture1";
-            this.letterPicture1.Size = new System.Drawing.Size(104, 104);
+            this.letterPicture1.Size = new System.Drawing.Size(139, 128);
             this.letterPicture1.TabIndex = 16;
             this.letterPicture1.TabStop = false;
             // 
             // enableButton
             // 
-            this.enableButton.Location = new System.Drawing.Point(504, 172);
+            this.enableButton.Location = new System.Drawing.Point(672, 212);
+            this.enableButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.enableButton.Name = "enableButton";
-            this.enableButton.Size = new System.Drawing.Size(75, 23);
+            this.enableButton.Size = new System.Drawing.Size(100, 28);
             this.enableButton.TabIndex = 31;
             this.enableButton.Text = "Enable";
             this.enableButton.UseVisualStyleBackColor = true;
@@ -194,9 +214,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(645, 453);
+            this.ClientSize = new System.Drawing.Size(860, 558);
             this.Controls.Add(this.enableButton);
             this.Controls.Add(this.submitAnswerButton);
             this.Controls.Add(this.scoreLabel);
@@ -213,6 +233,7 @@
             this.Controls.Add(this.letterPicture3);
             this.Controls.Add(this.letterPicture2);
             this.Controls.Add(this.letterPicture1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

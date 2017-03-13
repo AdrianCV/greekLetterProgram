@@ -16,12 +16,10 @@ namespace greekLetterProgram
         public Form1()
         {
             InitializeComponent();
-            INIT1();
         }
 
         int score = 0;
         int group = 1;
-        int maxscore = 4;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -44,7 +42,6 @@ namespace greekLetterProgram
             {
                 submitAnswerButton.Text = "Avgi svar";
                 group += 1;
-                maxscore += 4;
                 if (group < 7)
                 {
                     UpdateLabels();
@@ -52,7 +49,7 @@ namespace greekLetterProgram
 
                 if (group == 7)
                 {
-                    DialogResult answer = MessageBox.Show("Du fikk " + score + "/" + maxscore + "\n \n Vil du starte på nytt?", "Resultattavle", MessageBoxButtons.YesNo);
+                    DialogResult answer = MessageBox.Show("Du fikk " + score + "/" + group * 4 + "\n \n Vil du starte på nytt?", "Resultattavle", MessageBoxButtons.YesNo);
                     if (answer == DialogResult.Yes)
                     {
                         Reset();
@@ -68,13 +65,12 @@ namespace greekLetterProgram
         private void UpdateLabels()
         {
             groupLabel.Text = "Group " + group;
-            scoreLabel.Text = "Score " + score + "/" + maxscore;
+            scoreLabel.Text = "Score " + score + "/" + group * 4;
         }
 
         private void Reset()
         {
             score = 0;
-            maxscore = 4;
             group = 1;
             UpdateLabels();
         }
@@ -86,9 +82,9 @@ namespace greekLetterProgram
 
         private Point firstPoint = new Point();
 
-        private void INIT1()
+        private void INIT1(Label label)
         {
-            label1.MouseDown += (ss, ee) =>
+            label.MouseDown += (ss, ee) =>
             {
                 if (ee.Button == System.Windows.Forms.MouseButtons.Left)
                 {
@@ -96,17 +92,37 @@ namespace greekLetterProgram
                 }
             };
 
-            label1.MouseMove += (ss, ee) =>
+            label.MouseMove += (ss, ee) =>
             {
                 if (ee.Button == System.Windows.Forms.MouseButtons.Left)
                 {
-                    label1.BringToFront();
+                    label.BringToFront();
                     Point temp = Control.MousePosition;
                     Point res = new Point(firstPoint.X - temp.X, firstPoint.Y - temp.Y);
-                    label1.Location = new Point(label1.Location.X - res.X, label1.Location.Y - res.Y);
+                    label.Location = new Point(label.Location.X - res.X, label.Location.Y - res.Y);
                     firstPoint = temp;
                 }
             };
+        }
+
+        private void nameLabel1_Click(object sender, EventArgs e)
+        {
+            INIT1(nameLabel1);
+        }
+
+        private void nameLabel2_Click(object sender, EventArgs e)
+        {
+            INIT1(nameLabel2);
+        }
+
+        private void nameLabel3_Click(object sender, EventArgs e)
+        {
+            INIT1(nameLabel3);
+        }
+
+        private void nameLabel4_Click(object sender, EventArgs e)
+        {
+            INIT1(nameLabel4);
         }
     }
 }

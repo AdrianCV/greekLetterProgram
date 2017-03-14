@@ -49,7 +49,7 @@ namespace greekLetterProgram
 
                 if (group == 7)
                 {
-                    DialogResult answer = MessageBox.Show("Du fikk " + score + "/" + group * 4 + "\n \n Vil du starte på nytt?", "Resultattavle", MessageBoxButtons.YesNo);
+                    DialogResult answer = MessageBox.Show("Du fikk " + score + "/" + (group - 1) * 4 + "\n \n Vil du starte på nytt?", "Resultattavle", MessageBoxButtons.YesNo);
                     if (answer == DialogResult.Yes)
                     {
                         Reset();
@@ -82,7 +82,7 @@ namespace greekLetterProgram
 
         private Point firstPoint = new Point();
 
-        private void INIT1(Label label)
+        private void DragAndDrop(Label label)
         {
             label.MouseDown += (ss, ee) =>
             {
@@ -103,26 +103,34 @@ namespace greekLetterProgram
                     firstPoint = temp;
                 }
             };
+
+            label.MouseUp += (ss, ee) =>
+            {
+                if (label.Bounds.IntersectsWith(letterPicture1.Bounds))
+                {
+
+                }
+            };
         }
 
         private void nameLabel1_Click(object sender, EventArgs e)
         {
-            INIT1(nameLabel1);
+            DragAndDrop(nameLabel1);
         }
 
         private void nameLabel2_Click(object sender, EventArgs e)
         {
-            INIT1(nameLabel2);
+            DragAndDrop(nameLabel2);
         }
 
         private void nameLabel3_Click(object sender, EventArgs e)
         {
-            INIT1(nameLabel3);
+            DragAndDrop(nameLabel3);
         }
 
         private void nameLabel4_Click(object sender, EventArgs e)
         {
-            INIT1(nameLabel4);
+            DragAndDrop(nameLabel4);
         }
     }
 }

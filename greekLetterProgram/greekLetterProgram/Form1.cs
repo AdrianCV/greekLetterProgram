@@ -45,6 +45,7 @@ namespace greekLetterProgram
                 if (group < 7)
                 {
                     UpdateLabels();
+                    ResetPosition();
                 }
 
                 if (group == 7)
@@ -111,6 +112,31 @@ namespace greekLetterProgram
 
                 }
             };
+        }
+
+        private void ResetPosition()
+        {
+            nameLabel1.Location = new Point(552, 74);
+            nameLabel2.Location = new Point(552, 122);
+            nameLabel3.Location = new Point(552, 170);
+            nameLabel4.Location = new Point(552, 218);
+        }
+
+        private void ResetPosition(Label label)
+        {
+            label.Location = new Point(552, 74);
+            if (label.Bounds.IntersectsWith(nameLabel1.Bounds))
+            {
+                label.Location = new Point(label.Location.X, label.Location.Y + 48);
+            }
+            if (label.Bounds.IntersectsWith(nameLabel2.Bounds))
+            {
+                label.Location = new Point(label.Location.X, label.Location.Y + 48);
+            }
+            if (label.Bounds.IntersectsWith(nameLabel3.Bounds))
+            {
+                label.Location = new Point(label.Location.X, label.Location.Y + 48);
+            }
         }
 
         private void nameLabel1_Click(object sender, EventArgs e)

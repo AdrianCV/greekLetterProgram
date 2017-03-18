@@ -79,6 +79,7 @@ namespace greekLetterProgram
         private void enableButton_Click(object sender, EventArgs e)
         {
             submitAnswerButton.Enabled = true;
+            ResetPosition(nameLabel4);
         }
 
         private Point firstPoint = new Point();
@@ -125,15 +126,15 @@ namespace greekLetterProgram
         private void ResetPosition(Label label)
         {
             label.Location = new Point(552, 74);
-            if (label.Bounds.IntersectsWith(nameLabel1.Bounds))
+            if (label.Bounds.IntersectsWith(nameLabel1.Bounds) || label.Bounds.IntersectsWith(nameLabel2.Bounds) || label.Bounds.IntersectsWith(nameLabel3.Bounds) || label.Bounds.IntersectsWith(nameLabel4.Bounds))
             {
                 label.Location = new Point(label.Location.X, label.Location.Y + 48);
             }
-            if (label.Bounds.IntersectsWith(nameLabel2.Bounds))
+            if (label.Bounds.IntersectsWith(nameLabel1.Bounds) || label.Bounds.IntersectsWith(nameLabel2.Bounds) || label.Bounds.IntersectsWith(nameLabel3.Bounds) || label.Bounds.IntersectsWith(nameLabel4.Bounds))
             {
                 label.Location = new Point(label.Location.X, label.Location.Y + 48);
             }
-            if (label.Bounds.IntersectsWith(nameLabel3.Bounds))
+            if (label.Bounds.IntersectsWith(nameLabel1.Bounds) || label.Bounds.IntersectsWith(nameLabel2.Bounds) || label.Bounds.IntersectsWith(nameLabel3.Bounds) || label.Bounds.IntersectsWith(nameLabel4.Bounds))
             {
                 label.Location = new Point(label.Location.X, label.Location.Y + 48);
             }

@@ -24,6 +24,10 @@ namespace greekLetterProgram
         private void Form1_Load(object sender, EventArgs e)
         {
             submitAnswerButton.Enabled = false;
+            DragAndDrop(nameLabel1);
+            DragAndDrop(nameLabel2);
+            DragAndDrop(nameLabel3);
+            DragAndDrop(nameLabel4);
         }
 
         private void submitAnswerButton_Click(object sender, EventArgs e)
@@ -79,7 +83,6 @@ namespace greekLetterProgram
         private void enableButton_Click(object sender, EventArgs e)
         {
             submitAnswerButton.Enabled = true;
-            ResetPosition(nameLabel4);
         }
 
         private Point firstPoint = new Point();
@@ -126,15 +129,15 @@ namespace greekLetterProgram
         private void ResetPosition(Label label)
         {
             label.Location = new Point(552, 74);
-            if (label.Bounds.IntersectsWith(nameLabel1.Bounds) || label.Bounds.IntersectsWith(nameLabel2.Bounds) || label.Bounds.IntersectsWith(nameLabel3.Bounds) || label.Bounds.IntersectsWith(nameLabel4.Bounds))
+            if (label.Bounds.IntersectsWith(nameLabel1.Bounds) && !(label.Text == nameLabel1.Text) || label.Bounds.IntersectsWith(nameLabel2.Bounds) && !(label.Text == nameLabel2.Text) || label.Bounds.IntersectsWith(nameLabel3.Bounds) && !(label.Text == nameLabel3.Text) || label.Bounds.IntersectsWith(nameLabel4.Bounds) && !(label.Text == nameLabel4.Text))
             {
                 label.Location = new Point(label.Location.X, label.Location.Y + 48);
             }
-            if (label.Bounds.IntersectsWith(nameLabel1.Bounds) || label.Bounds.IntersectsWith(nameLabel2.Bounds) || label.Bounds.IntersectsWith(nameLabel3.Bounds) || label.Bounds.IntersectsWith(nameLabel4.Bounds))
+            if (label.Bounds.IntersectsWith(nameLabel1.Bounds) && !(label.Text == nameLabel1.Text) || label.Bounds.IntersectsWith(nameLabel2.Bounds) && !(label.Text == nameLabel2.Text) || label.Bounds.IntersectsWith(nameLabel3.Bounds) && !(label.Text == nameLabel3.Text) || label.Bounds.IntersectsWith(nameLabel4.Bounds) && !(label.Text == nameLabel4.Text))
             {
                 label.Location = new Point(label.Location.X, label.Location.Y + 48);
             }
-            if (label.Bounds.IntersectsWith(nameLabel1.Bounds) || label.Bounds.IntersectsWith(nameLabel2.Bounds) || label.Bounds.IntersectsWith(nameLabel3.Bounds) || label.Bounds.IntersectsWith(nameLabel4.Bounds))
+            if (label.Bounds.IntersectsWith(nameLabel1.Bounds) && !(label.Text == nameLabel1.Text) || label.Bounds.IntersectsWith(nameLabel2.Bounds) && !(label.Text == nameLabel2.Text) || label.Bounds.IntersectsWith(nameLabel3.Bounds) && !(label.Text == nameLabel3.Text) || label.Bounds.IntersectsWith(nameLabel4.Bounds) && !(label.Text == nameLabel4.Text))
             {
                 label.Location = new Point(label.Location.X, label.Location.Y + 48);
             }
@@ -142,22 +145,22 @@ namespace greekLetterProgram
 
         private void nameLabel1_Click(object sender, EventArgs e)
         {
-            DragAndDrop(nameLabel1);
+
         }
 
         private void nameLabel2_Click(object sender, EventArgs e)
         {
-            DragAndDrop(nameLabel2);
+
         }
 
         private void nameLabel3_Click(object sender, EventArgs e)
         {
-            DragAndDrop(nameLabel3);
+
         }
 
         private void nameLabel4_Click(object sender, EventArgs e)
         {
-            DragAndDrop(nameLabel4);
+
         }
     }
 }

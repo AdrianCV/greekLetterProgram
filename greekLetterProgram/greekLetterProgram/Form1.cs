@@ -21,6 +21,8 @@ namespace greekLetterProgram
         int score = 0;
         int group = 1;
 
+        List<PictureInfo> pictureInfoList = new List<PictureInfo>();
+
         private void Form1_Load(object sender, EventArgs e)
         {
             submitAnswerButton.Enabled = false;
@@ -28,6 +30,34 @@ namespace greekLetterProgram
             DragAndDrop(nameLabel2);
             DragAndDrop(nameLabel3);
             DragAndDrop(nameLabel4);
+        }
+
+        private void ListAdd()
+        {
+            pictureInfoList.Add(new PictureInfo("Alpha", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
+            pictureInfoList.Add(new PictureInfo("Beta", @"GreekLetter\UpperCaseBeta.png", @"GreekLetter\LowerCaseBeta.png"));
+            pictureInfoList.Add(new PictureInfo("Gamma", @"GreekLetter\UpperCaseGamma.png", @"GreekLetter\LowerCaseGamma.png"));
+            pictureInfoList.Add(new PictureInfo("Delta", @"GreekLetter\UpperCaseDelta.png", @"GreekLetter\LowerCaseDelta.png"));
+            pictureInfoList.Add(new PictureInfo("Epsilon", @"GreekLetter\UpperCaseEpsilon.png", @"GreekLetter\LowerCaseEpsilon.png"));
+            pictureInfoList.Add(new PictureInfo("Zeta", @"GreekLetter\UpperCaseZeta.png", @"GreekLetter\LowerCaseZeta.png"));
+            pictureInfoList.Add(new PictureInfo("Eta", @"GreekLetter\UpperCaseEta.png", @"GreekLetter\LowerCaseEta.png"));
+            pictureInfoList.Add(new PictureInfo("Theta", @"GreekLetter\UpperCaseTheta.png", @"GreekLetter\LowerCaseTheta.png"));
+            pictureInfoList.Add(new PictureInfo("Iota", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
+            pictureInfoList.Add(new PictureInfo("Kappa", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
+            pictureInfoList.Add(new PictureInfo("Lambda", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
+            pictureInfoList.Add(new PictureInfo("Mu", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
+            pictureInfoList.Add(new PictureInfo("Nu", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
+            pictureInfoList.Add(new PictureInfo("Xi", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
+            pictureInfoList.Add(new PictureInfo("Omicron", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
+            pictureInfoList.Add(new PictureInfo("Pi", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
+            pictureInfoList.Add(new PictureInfo("Rho", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
+            pictureInfoList.Add(new PictureInfo("Sigma", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
+            pictureInfoList.Add(new PictureInfo("Tau", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
+            pictureInfoList.Add(new PictureInfo("Upsilon", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
+            pictureInfoList.Add(new PictureInfo("Phi", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
+            pictureInfoList.Add(new PictureInfo("Chi", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
+            pictureInfoList.Add(new PictureInfo("Psi", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
+            pictureInfoList.Add(new PictureInfo("Omega", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
         }
 
         private void submitAnswerButton_Click(object sender, EventArgs e)
@@ -44,6 +74,10 @@ namespace greekLetterProgram
             }
             else
             {
+                nameLabel1.Enabled = true;
+                nameLabel2.Enabled = true;
+                nameLabel3.Enabled = true;
+                nameLabel4.Enabled = true;
                 submitAnswerButton.Text = "Avgi svar";
                 group += 1;
                 if (group < 7)
@@ -80,11 +114,6 @@ namespace greekLetterProgram
             UpdateLabels();
         }
 
-        private void enableButton_Click(object sender, EventArgs e)
-        {
-            submitAnswerButton.Enabled = true;
-        }
-
         private Point firstPoint = new Point();
 
         private void DragAndDrop(Label label)
@@ -113,9 +142,42 @@ namespace greekLetterProgram
             {
                 if (label.Bounds.IntersectsWith(letterPicture1.Bounds))
                 {
-
+                    LockPosition(label, letterPicture1);
+                }
+                else if (label.Bounds.IntersectsWith(letterPicture2.Bounds))
+                {
+                    LockPosition(label, letterPicture2);
+                }
+                else if (label.Bounds.IntersectsWith(letterPicture3.Bounds))
+                {
+                    LockPosition(label, letterPicture3);
+                }
+                else if (label.Bounds.IntersectsWith(letterPicture4.Bounds))
+                {
+                    LockPosition(label, letterPicture4);
                 }
             };
+        }
+
+        private void LockPosition(Label label, PictureBox PBox)
+        {
+            if ((nameLabel1.Location.X == PBox.Location.X + 100 && nameLabel1.Location.Y == PBox.Location.Y + 54)||
+                (nameLabel2.Location.X == PBox.Location.X + 100 && nameLabel2.Location.Y == PBox.Location.Y + 54)||
+                (nameLabel3.Location.X == PBox.Location.X + 100 && nameLabel3.Location.Y == PBox.Location.Y + 54)||
+                (nameLabel4.Location.X == PBox.Location.X + 100 && nameLabel4.Location.Y == PBox.Location.Y + 54))
+            {
+                ResetPosition(label);
+            }
+            else
+            {
+                label.Location = new Point(PBox.Location.X + 100, PBox.Location.Y + 54);
+                label.Enabled = false;
+            }
+
+            if (nameLabel1.Enabled==false && nameLabel2.Enabled == false && nameLabel3.Enabled == false && nameLabel4.Enabled == false)
+            {
+                submitAnswerButton.Enabled = true;
+            }
         }
 
         private void ResetPosition()
@@ -141,26 +203,6 @@ namespace greekLetterProgram
             {
                 label.Location = new Point(label.Location.X, label.Location.Y + 48);
             }
-        }
-
-        private void nameLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nameLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nameLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nameLabel4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

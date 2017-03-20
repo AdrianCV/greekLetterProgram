@@ -43,7 +43,6 @@
             this.letterPicture3 = new System.Windows.Forms.PictureBox();
             this.letterPicture2 = new System.Windows.Forms.PictureBox();
             this.letterPicture1 = new System.Windows.Forms.PictureBox();
-            this.enableButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.feedbackPicture4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.feedbackPicture3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.feedbackPicture2)).BeginInit();
@@ -90,7 +89,6 @@
             this.nameLabel4.Size = new System.Drawing.Size(35, 13);
             this.nameLabel4.TabIndex = 27;
             this.nameLabel4.Text = "label4";
-            this.nameLabel4.Click += new System.EventHandler(this.nameLabel4_Click);
             // 
             // nameLabel3
             // 
@@ -100,7 +98,6 @@
             this.nameLabel3.Size = new System.Drawing.Size(35, 13);
             this.nameLabel3.TabIndex = 26;
             this.nameLabel3.Text = "label3";
-            this.nameLabel3.Click += new System.EventHandler(this.nameLabel3_Click);
             // 
             // nameLabel2
             // 
@@ -110,7 +107,6 @@
             this.nameLabel2.Size = new System.Drawing.Size(35, 13);
             this.nameLabel2.TabIndex = 25;
             this.nameLabel2.Text = "label2";
-            this.nameLabel2.Click += new System.EventHandler(this.nameLabel2_Click);
             // 
             // nameLabel1
             // 
@@ -120,7 +116,6 @@
             this.nameLabel1.Size = new System.Drawing.Size(35, 13);
             this.nameLabel1.TabIndex = 24;
             this.nameLabel1.Text = "label1";
-            this.nameLabel1.Click += new System.EventHandler(this.nameLabel1_Click);
             // 
             // feedbackPicture4
             // 
@@ -186,22 +181,11 @@
             this.letterPicture1.TabIndex = 16;
             this.letterPicture1.TabStop = false;
             // 
-            // enableButton
-            // 
-            this.enableButton.Location = new System.Drawing.Point(344, 399);
-            this.enableButton.Name = "enableButton";
-            this.enableButton.Size = new System.Drawing.Size(75, 23);
-            this.enableButton.TabIndex = 31;
-            this.enableButton.Text = "Enable";
-            this.enableButton.UseVisualStyleBackColor = true;
-            this.enableButton.Click += new System.EventHandler(this.enableButton_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(645, 453);
-            this.Controls.Add(this.enableButton);
             this.Controls.Add(this.submitAnswerButton);
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.groupLabel);
@@ -250,7 +234,6 @@
         private System.Windows.Forms.PictureBox letterPicture3;
         private System.Windows.Forms.PictureBox letterPicture2;
         private System.Windows.Forms.PictureBox letterPicture1;
-        private System.Windows.Forms.Button enableButton;
     }
 }
 

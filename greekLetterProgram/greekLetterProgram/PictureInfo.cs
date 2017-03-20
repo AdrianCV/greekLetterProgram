@@ -12,7 +12,7 @@ namespace greekLetterProgram
         private string upperCaseLetterLink;
         private string lowerCaseLetterLink;
 
-        public void SetInfo(string letter, string upper, string lower)
+        public PictureInfo(string letter, string upper, string lower)
         {
             letterName = letter;
             upperCaseLetterLink = upper;

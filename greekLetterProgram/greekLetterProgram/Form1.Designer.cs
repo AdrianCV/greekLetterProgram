@@ -122,6 +122,7 @@
             this.feedbackPicture4.Location = new System.Drawing.Point(122, 342);
             this.feedbackPicture4.Name = "feedbackPicture4";
             this.feedbackPicture4.Size = new System.Drawing.Size(52, 52);
+            this.feedbackPicture4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.feedbackPicture4.TabIndex = 23;
             this.feedbackPicture4.TabStop = false;
             // 
@@ -130,6 +131,7 @@
             this.feedbackPicture3.Location = new System.Drawing.Point(122, 232);
             this.feedbackPicture3.Name = "feedbackPicture3";
             this.feedbackPicture3.Size = new System.Drawing.Size(52, 52);
+            this.feedbackPicture3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.feedbackPicture3.TabIndex = 22;
             this.feedbackPicture3.TabStop = false;
             // 
@@ -138,6 +140,7 @@
             this.feedbackPicture2.Location = new System.Drawing.Point(122, 122);
             this.feedbackPicture2.Name = "feedbackPicture2";
             this.feedbackPicture2.Size = new System.Drawing.Size(52, 52);
+            this.feedbackPicture2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.feedbackPicture2.TabIndex = 21;
             this.feedbackPicture2.TabStop = false;
             // 
@@ -146,6 +149,7 @@
             this.feedbackPicture1.Location = new System.Drawing.Point(122, 12);
             this.feedbackPicture1.Name = "feedbackPicture1";
             this.feedbackPicture1.Size = new System.Drawing.Size(52, 52);
+            this.feedbackPicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.feedbackPicture1.TabIndex = 20;
             this.feedbackPicture1.TabStop = false;
             // 
@@ -154,6 +158,7 @@
             this.letterPicture4.Location = new System.Drawing.Point(12, 342);
             this.letterPicture4.Name = "letterPicture4";
             this.letterPicture4.Size = new System.Drawing.Size(104, 104);
+            this.letterPicture4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.letterPicture4.TabIndex = 19;
             this.letterPicture4.TabStop = false;
             // 
@@ -162,6 +167,7 @@
             this.letterPicture3.Location = new System.Drawing.Point(12, 232);
             this.letterPicture3.Name = "letterPicture3";
             this.letterPicture3.Size = new System.Drawing.Size(104, 104);
+            this.letterPicture3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.letterPicture3.TabIndex = 18;
             this.letterPicture3.TabStop = false;
             // 
@@ -170,6 +176,7 @@
             this.letterPicture2.Location = new System.Drawing.Point(12, 122);
             this.letterPicture2.Name = "letterPicture2";
             this.letterPicture2.Size = new System.Drawing.Size(104, 104);
+            this.letterPicture2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.letterPicture2.TabIndex = 17;
             this.letterPicture2.TabStop = false;
             // 
@@ -178,6 +185,7 @@
             this.letterPicture1.Location = new System.Drawing.Point(12, 12);
             this.letterPicture1.Name = "letterPicture1";
             this.letterPicture1.Size = new System.Drawing.Size(104, 104);
+            this.letterPicture1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.letterPicture1.TabIndex = 16;
             this.letterPicture1.TabStop = false;
             // 

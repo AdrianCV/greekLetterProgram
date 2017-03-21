@@ -30,6 +30,8 @@ namespace greekLetterProgram
             DragAndDrop(nameLabel2);
             DragAndDrop(nameLabel3);
             DragAndDrop(nameLabel4);
+            ListAdd();
+            //letterPicture1.ImageLocation = pictureInfoList[1].UpperLink;
         }
 
         private void ListAdd()
@@ -42,22 +44,29 @@ namespace greekLetterProgram
             pictureInfoList.Add(new PictureInfo("Zeta", @"GreekLetter\UpperCaseZeta.png", @"GreekLetter\LowerCaseZeta.png"));
             pictureInfoList.Add(new PictureInfo("Eta", @"GreekLetter\UpperCaseEta.png", @"GreekLetter\LowerCaseEta.png"));
             pictureInfoList.Add(new PictureInfo("Theta", @"GreekLetter\UpperCaseTheta.png", @"GreekLetter\LowerCaseTheta.png"));
-            pictureInfoList.Add(new PictureInfo("Iota", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
-            pictureInfoList.Add(new PictureInfo("Kappa", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
-            pictureInfoList.Add(new PictureInfo("Lambda", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
-            pictureInfoList.Add(new PictureInfo("Mu", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
-            pictureInfoList.Add(new PictureInfo("Nu", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
-            pictureInfoList.Add(new PictureInfo("Xi", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
-            pictureInfoList.Add(new PictureInfo("Omicron", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
-            pictureInfoList.Add(new PictureInfo("Pi", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
-            pictureInfoList.Add(new PictureInfo("Rho", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
-            pictureInfoList.Add(new PictureInfo("Sigma", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
-            pictureInfoList.Add(new PictureInfo("Tau", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
-            pictureInfoList.Add(new PictureInfo("Upsilon", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
-            pictureInfoList.Add(new PictureInfo("Phi", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
-            pictureInfoList.Add(new PictureInfo("Chi", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
-            pictureInfoList.Add(new PictureInfo("Psi", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
-            pictureInfoList.Add(new PictureInfo("Omega", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
+            pictureInfoList.Add(new PictureInfo("Iota", @"GreekLetter\UpperCaseIota.png", @"GreekLetter\LowerCaseIota.png"));
+            pictureInfoList.Add(new PictureInfo("Kappa", @"GreekLetter\UpperCaseKappa.png", @"GreekLetter\LowerCaseKappa.png"));
+            pictureInfoList.Add(new PictureInfo("Lambda", @"GreekLetter\UpperCaseLambda.png", @"GreekLetter\LowerCaseLambda.png"));
+            pictureInfoList.Add(new PictureInfo("Mu", @"GreekLetter\UpperCaseMu.png", @"GreekLetter\LowerCaseMu.png"));
+            pictureInfoList.Add(new PictureInfo("Nu", @"GreekLetter\UpperCaseNu.png", @"GreekLetter\LowerCaseNu.png"));
+            pictureInfoList.Add(new PictureInfo("Xi", @"GreekLetter\UpperCaseXi.png", @"GreekLetter\LowerCaseXi.png"));
+            pictureInfoList.Add(new PictureInfo("Omicron", @"GreekLetter\UpperCaseOmicron.png", @"GreekLetter\LowerCaseOmicron.png"));
+            pictureInfoList.Add(new PictureInfo("Pi", @"GreekLetter\UpperCasePi.png", @"GreekLetter\LowerCasePi.png"));
+            pictureInfoList.Add(new PictureInfo("Rho", @"GreekLetter\UpperCaseRho.png", @"GreekLetter\LowerCaseRho.png"));
+            pictureInfoList.Add(new PictureInfo("Sigma", @"GreekLetter\UpperCaseSigma.png", @"GreekLetter\LowerCaseSigma.png"));
+            pictureInfoList.Add(new PictureInfo("Tau", @"GreekLetter\UpperCaseTau.png", @"GreekLetter\LowerCaseTau.png"));
+            pictureInfoList.Add(new PictureInfo("Upsilon", @"GreekLetter\UpperCaseUpsilon.png", @"GreekLetter\LowerCaseUpsilon.png"));
+            pictureInfoList.Add(new PictureInfo("Phi", @"GreekLetter\UpperCasePhi.png", @"GreekLetter\LowerCasePhi.png"));
+            pictureInfoList.Add(new PictureInfo("Chi", @"GreekLetter\UpperCaseChi.png", @"GreekLetter\LowerCaseChi.png"));
+            pictureInfoList.Add(new PictureInfo("Psi", @"GreekLetter\UpperCasePsi.png", @"GreekLetter\LowerCasePsi.png"));
+            pictureInfoList.Add(new PictureInfo("Omega", @"GreekLetter\UpperCaseOmega.png", @"GreekLetter\LowerCaseOmega.png"));
+        }
+
+        private void ChangeInfo(PictureBox pBox, Label label)
+        {
+            int[] usedIndex = new int[3] {-1, -1, -1};
+            Random rdm = new Random();
+            int random = rdm.Next(0, 4);
         }
 
         private void submitAnswerButton_Click(object sender, EventArgs e)

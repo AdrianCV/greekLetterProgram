@@ -8,6 +8,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace greekLetterProgram
 {
@@ -32,7 +33,6 @@ namespace greekLetterProgram
             DragAndDrop(nameLabel4);
             ListAdd();
             ChangeInfo();
-            //letterPicture1.ImageLocation = pictureInfoList[1].UpperLink;
         }
 
         private void ListAdd()
@@ -41,10 +41,11 @@ namespace greekLetterProgram
             pictureInfoList.Add(new PictureInfo("Gamma", @"GreekLetter\UpperCaseGamma.png", @"GreekLetter\LowerCaseGamma.png"));
             pictureInfoList.Add(new PictureInfo("Iota", @"GreekLetter\UpperCaseIota.png", @"GreekLetter\LowerCaseIota.png"));
             pictureInfoList.Add(new PictureInfo("Delta", @"GreekLetter\UpperCaseDelta.png", @"GreekLetter\LowerCaseDelta.png"));
+            pictureInfoList.Add(new PictureInfo("Xi", @"GreekLetter\UpperCaseXi.png", @"GreekLetter\LowerCaseXi.png"));
             pictureInfoList.Add(new PictureInfo("Beta", @"GreekLetter\UpperCaseBeta.png", @"GreekLetter\LowerCaseBeta.png"));
+            pictureInfoList.Add(new PictureInfo("Chi", @"GreekLetter\UpperCaseChi.png", @"GreekLetter\LowerCaseChi.png"));
             pictureInfoList.Add(new PictureInfo("Epsilon", @"GreekLetter\UpperCaseEpsilon.png", @"GreekLetter\LowerCaseEpsilon.png"));
             pictureInfoList.Add(new PictureInfo("Rho", @"GreekLetter\UpperCaseRho.png", @"GreekLetter\LowerCaseRho.png"));
-            pictureInfoList.Add(new PictureInfo("Xi", @"GreekLetter\UpperCaseXi.png", @"GreekLetter\LowerCaseXi.png"));
             pictureInfoList.Add(new PictureInfo("Zeta", @"GreekLetter\UpperCaseZeta.png", @"GreekLetter\LowerCaseZeta.png"));
             pictureInfoList.Add(new PictureInfo("Nu", @"GreekLetter\UpperCaseNu.png", @"GreekLetter\LowerCaseNu.png"));
             pictureInfoList.Add(new PictureInfo("Eta", @"GreekLetter\UpperCaseEta.png", @"GreekLetter\LowerCaseEta.png"));
@@ -60,8 +61,9 @@ namespace greekLetterProgram
             pictureInfoList.Add(new PictureInfo("Theta", @"GreekLetter\UpperCaseTheta.png", @"GreekLetter\LowerCaseTheta.png"));
             pictureInfoList.Add(new PictureInfo("Phi", @"GreekLetter\UpperCasePhi.png", @"GreekLetter\LowerCasePhi.png"));
             pictureInfoList.Add(new PictureInfo("Lambda", @"GreekLetter\UpperCaseLambda.png", @"GreekLetter\LowerCaseLambda.png"));
-            pictureInfoList.Add(new PictureInfo("Chi", @"GreekLetter\UpperCaseChi.png", @"GreekLetter\LowerCaseChi.png"));
         }
+
+        SoundPlayer background = new SoundPlayer(@"GreekLetter\FunkyBassShit.wav");
 
         private void ChangeInfo()
         {
@@ -85,11 +87,101 @@ namespace greekLetterProgram
                 letterPicture3.ImageLocation = pictureInfoList[4 * group - 2].UpperLink;
                 letterPicture4.ImageLocation = pictureInfoList[4 * group - 1].UpperLink;
             }
+            RandomLocation();
         }
 
         private void RandomLocation()
         {
+            Random rdm = new Random();
+            int random = rdm.Next(0, 24);
+            int[] combinations = { 1234, 1243, 1324, 1342, 1423, 1432, 2134, 2143, 2314, 2341, 2413, 2431, 3124, 3142, 3214, 3241, 3412, 3421, 4123, 4132, 4213, 4231, 4312, 4321 };
 
+            #region NoOpen
+            if (combinations[random] / 1000 == 1)
+            {
+                LabelPosition(nameLabel1, 1);
+            }
+            else if (combinations[random] / 1000 == 2)
+            {
+                LabelPosition(nameLabel2, 1);
+            }
+            else if (combinations[random] / 1000 == 3)
+            {
+                LabelPosition(nameLabel3, 1);
+            }
+            else if (combinations[random] / 1000 == 4)
+            {
+                LabelPosition(nameLabel4, 1);
+            }
+            if ((combinations[random] / 100)%10 == 1)
+            {
+                LabelPosition(nameLabel1, 2);
+            }
+            else if ((combinations[random] / 100) % 10 == 2)
+            {
+                LabelPosition(nameLabel2, 2);
+            }
+            else if ((combinations[random] / 100) % 10 == 3)
+            {
+                LabelPosition(nameLabel3, 2);
+            }
+            else if ((combinations[random] / 100) % 10 == 4)
+            {
+                LabelPosition(nameLabel4, 2);
+            }
+            if ((combinations[random] / 10) % 100 % 10 == 1)
+            {
+                LabelPosition(nameLabel1, 3);
+            }
+            else if ((combinations[random] / 10) % 100 % 10 == 2)
+            {
+                LabelPosition(nameLabel2, 3);
+            }
+            else if ((combinations[random] / 10) % 100 % 10 == 3)
+            {
+                LabelPosition(nameLabel3, 3);
+            }
+            else if ((combinations[random] / 10) % 100 % 10 == 4)
+            {
+                LabelPosition(nameLabel4, 3);
+            }
+            if (combinations[random] % 1000 % 100 % 10 == 1)
+            {
+                LabelPosition(nameLabel1, 4);
+            }
+            else if (combinations[random] % 1000 % 100 % 10 == 2)
+            {
+                LabelPosition(nameLabel2, 4);
+            }
+            else if (combinations[random] % 1000 % 100 % 10 == 3)
+            {
+                LabelPosition(nameLabel3, 4);
+            }
+            else if (combinations[random] % 1000 % 100 % 10 == 4)
+            {
+                LabelPosition(nameLabel4, 4);
+            }
+            #endregion NoOpen
+        }
+
+        private void LabelPosition(Label label, int position)
+        {
+            if (position == 1)
+            {
+                label.Location = new Point(552, 74);
+            }
+            else if (position == 2)
+            {
+                label.Location = new Point(552, 122);
+            }
+            else if (position == 3)
+            {
+                label.Location = new Point(552, 170);
+            }
+            else
+            {
+                label.Location = new Point(552, 218);
+            }
         }
 
         private void submitAnswerButton_Click(object sender, EventArgs e)
@@ -102,14 +194,20 @@ namespace greekLetterProgram
             if (submitAnswerButton.Text == "Avgi svar")
             {
                 submitAnswerButton.Text = "Neste";
+                Score();
                 UpdateLabels();
             }
             else
             {
+                submitAnswerButton.Enabled = false;
                 nameLabel1.Enabled = true;
                 nameLabel2.Enabled = true;
                 nameLabel3.Enabled = true;
                 nameLabel4.Enabled = true;
+                feedbackPicture1.Image = null;
+                feedbackPicture2.Image = null;
+                feedbackPicture3.Image = null;
+                feedbackPicture4.Image = null;
                 submitAnswerButton.Text = "Avgi svar";
                 group += 1;
                 if (group < 7)
@@ -128,9 +226,50 @@ namespace greekLetterProgram
                     else
                     {
                         Close();
+                        return;
                     }
                 }
                 ChangeInfo();
+            }
+        }
+
+        private void Score()
+        {
+            if (nameLabel1.Location.X == letterPicture1.Location.X + 110 && nameLabel1.Location.Y == letterPicture1.Location.Y + 54)
+            {
+                feedbackPicture1.ImageLocation = @"GreekLetter\FeedBackRight.png";
+                score++;
+            }
+            else
+            {
+                feedbackPicture1.ImageLocation = @"GreekLetter\FeedBackWrong.png";
+            }
+            if (nameLabel2.Location.X == letterPicture2.Location.X + 110 && nameLabel2.Location.Y == letterPicture2.Location.Y + 54)
+            {
+                feedbackPicture2.ImageLocation = @"GreekLetter\FeedBackRight.png";
+                score++;
+            }
+            else
+            {
+                feedbackPicture2.ImageLocation = @"GreekLetter\FeedBackWrong.png";
+            }
+            if (nameLabel3.Location.X == letterPicture3.Location.X + 110 && nameLabel3.Location.Y == letterPicture3.Location.Y + 54)
+            {
+                feedbackPicture3.ImageLocation = @"GreekLetter\FeedBackRight.png";
+                score++;
+            }
+            else
+            {
+                feedbackPicture3.ImageLocation = @"GreekLetter\FeedBackWrong.png";
+            }
+            if (nameLabel4.Location.X == letterPicture4.Location.X + 110 && nameLabel4.Location.Y == letterPicture4.Location.Y + 54)
+            {
+                feedbackPicture4.ImageLocation = @"GreekLetter\FeedBackRight.png";
+                score++;
+            }
+            else
+            {
+                feedbackPicture4.ImageLocation = @"GreekLetter\FeedBackWrong.png";
             }
         }
 
@@ -189,21 +328,25 @@ namespace greekLetterProgram
                 {
                     LockPosition(label, letterPicture4);
                 }
+                if (!label.Bounds.IntersectsWith(panel1.Bounds))
+                {
+                    ResetPosition(label);
+                }
             };
         }
 
         private void LockPosition(Label label, PictureBox PBox)
         {
-            if ((nameLabel1.Location.X == PBox.Location.X + 100 && nameLabel1.Location.Y == PBox.Location.Y + 54)||
-                (nameLabel2.Location.X == PBox.Location.X + 100 && nameLabel2.Location.Y == PBox.Location.Y + 54)||
-                (nameLabel3.Location.X == PBox.Location.X + 100 && nameLabel3.Location.Y == PBox.Location.Y + 54)||
-                (nameLabel4.Location.X == PBox.Location.X + 100 && nameLabel4.Location.Y == PBox.Location.Y + 54))
+            if ((nameLabel1.Location.X == PBox.Location.X + 110 && nameLabel1.Location.Y == PBox.Location.Y + 54)||
+                (nameLabel2.Location.X == PBox.Location.X + 110 && nameLabel2.Location.Y == PBox.Location.Y + 54)||
+                (nameLabel3.Location.X == PBox.Location.X + 110 && nameLabel3.Location.Y == PBox.Location.Y + 54)||
+                (nameLabel4.Location.X == PBox.Location.X + 110 && nameLabel4.Location.Y == PBox.Location.Y + 54))
             {
                 ResetPosition(label);
             }
             else
             {
-                label.Location = new Point(PBox.Location.X + 100, PBox.Location.Y + 54);
+                label.Location = new Point(PBox.Location.X + 110, PBox.Location.Y + 54);
                 label.Enabled = false;
             }
 

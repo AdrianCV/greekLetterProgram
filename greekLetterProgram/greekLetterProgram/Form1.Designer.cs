@@ -75,7 +75,7 @@
             this.panel1.Controls.Add(this.letterPicture1);
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(643, 452);
+            this.panel1.Size = new System.Drawing.Size(644, 452);
             this.panel1.TabIndex = 0;
             // 
             // submitAnswerButton
@@ -109,7 +109,7 @@
             // nameLabel4
             // 
             this.nameLabel4.AutoSize = true;
-            this.nameLabel4.BackColor = System.Drawing.SystemColors.Control;
+            this.nameLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.nameLabel4.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel4.Location = new System.Drawing.Point(551, 217);
             this.nameLabel4.Name = "nameLabel4";
@@ -120,7 +120,7 @@
             // nameLabel3
             // 
             this.nameLabel3.AutoSize = true;
-            this.nameLabel3.BackColor = System.Drawing.SystemColors.Control;
+            this.nameLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.nameLabel3.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel3.Location = new System.Drawing.Point(551, 169);
             this.nameLabel3.Name = "nameLabel3";
@@ -131,7 +131,7 @@
             // nameLabel2
             // 
             this.nameLabel2.AutoSize = true;
-            this.nameLabel2.BackColor = System.Drawing.SystemColors.Control;
+            this.nameLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.nameLabel2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel2.Location = new System.Drawing.Point(551, 121);
             this.nameLabel2.Name = "nameLabel2";
@@ -142,7 +142,7 @@
             // nameLabel1
             // 
             this.nameLabel1.AutoSize = true;
-            this.nameLabel1.BackColor = System.Drawing.SystemColors.Control;
+            this.nameLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.nameLabel1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.nameLabel1.Location = new System.Drawing.Point(551, 73);

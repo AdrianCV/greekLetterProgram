@@ -33,8 +33,10 @@ namespace greekLetterProgram
             DragAndDrop(nameLabel4);
             ListAdd();
             ChangeInfo();
+            background.PlayLooping();
         }
 
+        //Legger alle bildene inn i en liste
         private void ListAdd()
         {
             pictureInfoList.Add(new PictureInfo("Alpha", @"GreekLetter\UpperCaseAlpha.png", @"GreekLetter\LowerCaseAlpha.png"));
@@ -63,10 +65,15 @@ namespace greekLetterProgram
             pictureInfoList.Add(new PictureInfo("Lambda", @"GreekLetter\UpperCaseLambda.png", @"GreekLetter\LowerCaseLambda.png"));
         }
 
+        //Legger til lydfiler
         SoundPlayer background = new SoundPlayer(@"GreekLetter\FunkyBassShit.wav");
+        SoundPlayer fullScore = new SoundPlayer(@"GreekLetter\SexySlideShit.wav");
+        SoundPlayer lowScore = new SoundPlayer(@"GreekLetter\SadGuitarShit.wav");
 
+        //endrer info i pricturebox og label
         private void ChangeInfo()
         {
+            //Bruker randomgenerator for å velge små eller store bokstaver
             Random rdm = new Random();
             int random = rdm.Next(0, 2);
             nameLabel1.Text = pictureInfoList[4 * group - 4].LetterName;
@@ -90,6 +97,7 @@ namespace greekLetterProgram
             RandomLocation();
         }
 
+        //Bruker randomgenerator til å stokke om labels
         private void RandomLocation()
         {
             Random rdm = new Random();
@@ -164,6 +172,7 @@ namespace greekLetterProgram
             #endregion NoOpen
         }
 
+        //Plasserer labels i henhold til posisjonen de fikk i RandomLocation()
         private void LabelPosition(Label label, int position)
         {
             if (position == 1)
@@ -189,6 +198,7 @@ namespace greekLetterProgram
             SubmitAnswer();
         }
 
+        //Regner ut score og gjør klar neste gruppe med bilder og labels, viser også resultatvindu når spillet er over
         private void SubmitAnswer()
         {
             if (submitAnswerButton.Text == "Avgi svar")
@@ -218,6 +228,16 @@ namespace greekLetterProgram
 
                 if (group == 7)
                 {
+                    background.Stop();
+                    if (score == 24)
+                    {
+                        fullScore.Play();
+                    }
+                    else
+                    {
+                        lowScore.Play();
+                    }
+
                     DialogResult answer = MessageBox.Show("Du fikk " + score + "/" + (group - 1) * 4 + "\n \n Vil du starte på nytt?", "Resultattavle", MessageBoxButtons.YesNo);
                     if (answer == DialogResult.Yes)
                     {
@@ -233,6 +253,7 @@ namespace greekLetterProgram
             }
         }
 
+        //Sjekker posisjonen til alle labels og regner ut score. Viser relevante feedback-bilder
         private void Score()
         {
             if (nameLabel1.Location.X == letterPicture1.Location.X + 110 && nameLabel1.Location.Y == letterPicture1.Location.Y + 54)
@@ -284,10 +305,12 @@ namespace greekLetterProgram
             score = 0;
             group = 1;
             UpdateLabels();
+            background.PlayLooping();
         }
 
         private Point firstPoint = new Point();
 
+        //Håndterer bevegelse av labels og kjører låserutinen
         private void DragAndDrop(Label label)
         {
             label.MouseDown += (ss, ee) =>
@@ -335,6 +358,7 @@ namespace greekLetterProgram
             };
         }
 
+        //Låser posisjonen til labels til et bestemt punkt i forhold til bildene
         private void LockPosition(Label label, PictureBox PBox)
         {
             if ((nameLabel1.Location.X == PBox.Location.X + 110 && nameLabel1.Location.Y == PBox.Location.Y + 54)||
@@ -364,6 +388,7 @@ namespace greekLetterProgram
             nameLabel4.Location = new Point(552, 218);
         }
 
+        //Plasserer labels i først ledige plass
         private void ResetPosition(Label label)
         {
             label.Location = new Point(552, 74);
